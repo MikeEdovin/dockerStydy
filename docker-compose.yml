@@ -1,0 +1,12 @@
+services:
+  identidock:
+    container_name: compose-test
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      ENV: DEV
+    volumes:
+      - ./app:/app

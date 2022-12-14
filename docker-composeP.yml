@@ -1,0 +1,11 @@
+services:
+  identidock:
+    container_name: compose-p
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 9090
+      - 9191
+    environment:
+      ENV: PRD
