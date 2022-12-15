@@ -9,3 +9,12 @@ services:
       - 9191
     environment:
       ENV: PRD
+    links:
+      - dnmonster
+      - redis
+
+  dnmonster:
+    image: amouat/dnmonster
+
+  redis:
+    image: redis
